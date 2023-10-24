@@ -26,87 +26,87 @@ const createRestoItemTemplate = (resto) => {
 `;
 };
 
-// const createRestoDetailTemplate = (resto) => {
-//   let categoriesElement = '';
-//   let foodsElement = '';
-//   let drinksElement = '';
-//   let reviewsElement = '';
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this resto" id="likeButton" class="like">
+    <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
+    <i class="fa-solid fa-thumbs-up" aria-hidden=true></i> Add to Favorite
+  </button>
+  `;
 
-//   resto.categories.forEach((category) => {
-//     categoriesElement += `<p class="category">${category.name}</p>`;
-//   });
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this resto" id="likeButton" class="like">
+  <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+  <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Delete from Favorite
+  </button>
+  `;
+const createRestoDetailTemplate = (resto) => {
+  let categoriesElement = '';
+  let foodsElement = '';
+  let drinksElement = '';
+  let reviewsElement = '';
 
-//   resto.menus.foods.forEach((food) => {
-//     foodsElement += `
-//       <li><i class="fa-solid fa-pizza-slice" style="color: #81b29a;"></i> ${food.name}</li>`;
-//   });
+  resto.categories.forEach((category) => {
+    categoriesElement += `<p class="category">${category.name}</p>`;
+  });
 
-//   resto.menus.drinks.forEach((drink) => {
-//     drinksElement += `
-//       <li><i class="fa-solid fa-mug-hot" style="color: #81b29a;"></i> ${drink.name}</li>`;
-//   });
+  resto.menus.foods.forEach((food) => {
+    foodsElement += `
+      <li><i class="fa-solid fa-pizza-slice" style="color: #81b29a;"></i> ${food.name}</li>`;
+  });
 
-//   resto.customerReviews.forEach((review) => {
-//     reviewsElement += `
-//       <div class="reviewContainer">
-//         <h3 class="customerName">${review.name}</h3>
-//         <p class="review">${review.review}</p>
-//         <p class="reviewDate">${review.date}</p>
-//       </div>
-//     `;
-//   });
+  resto.menus.drinks.forEach((drink) => {
+    drinksElement += `
+      <li><i class="fa-solid fa-mug-hot" style="color: #81b29a;"></i> ${drink.name}</li>`;
+  });
 
-//   return `
-//       <h2 class="resto__title">${resto.name}</h2>
-//       <h3>${resto.city}</h3>
-//       <div class="resto__data">
-//         <div class="categories">${categoriesElement}</div>
-//         <figure class="resto__image-container">
-//           <img src="${CONFIG.BASE_IMAGE_URL}/${resto.pictureId}" alt="${resto.name}">
-//           <figcaption>Rating: <span>${resto.rating}</span></figcaption>
-//         </figure>
-//         <div class="resto__info">
-//           <h4>Description</h4>
-//           <p>${resto.description}</p>
-//           <h4>Address</h4>
-//           <p>${resto.address}</p>
-//           <h4>Menu Lists</h4>
-//           <div class="resto__menu-list">
-//             <div class="menu foods-menu">
-//               <h5>Foods</h5>
-//               <ul>${foodsElement}</ul>
-//             </div>
-//             <div class="menu drinks-menu">
-//               <h5>Drinks</h5>
-//               <ul>${drinksElement}</ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <h2>Reviews</h2>
-//       <div class="reviews">
-//         ${reviewsElement}
-//       </div>
-// `;
-// };
+  resto.customerReviews.forEach((review) => {
+    reviewsElement += `
+      <div class="reviewContainer">
+        <h3 class="customerName">${review.name}</h3>
+        <p class="review">${review.review}</p>
+        <p class="reviewDate">${review.date}</p>
+      </div>
+    `;
+  });
 
-// const createLikeButtonTemplate = () => `
-//   <button aria-label="like this resto" id="likeButton" class="like">
-//     <i class="fa-regular fa-thumbs-up" aria-hidden="true"></i>
-//     <i class="fa-solid fa-thumbs-up" aria-hidden=true></i> Add to Favorite
-//   </button>
-//   `;
+  return `
+      <h2 class="resto__title">${resto.name}</h2>
+      <h3>${resto.city}</h3>
+      <div class="resto__data">
+        <div class="categories">${categoriesElement}</div>
+        <figure class="resto__image-container">
+          <img src="${CONFIG.BASE_IMAGE_URL}/${resto.pictureId}" alt="${resto.name}">
+          <figcaption>Rating: <span>${resto.rating}</span></figcaption>
+        </figure>
+        <div class="resto__info">
+          <h4>Description</h4>
+          <p>${resto.description}</p>
+          <h4>Address</h4>
+          <p>${resto.address}</p>
+          <h4>Menu Lists</h4>
+          <div class="resto__menu-list">
+            <div class="menu foods-menu">
+              <h5>Foods</h5>
+              <ul>${foodsElement}</ul>
+            </div>
+            <div class="menu drinks-menu">
+              <h5>Drinks</h5>
+              <ul>${drinksElement}</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Reviews</h2>
+      <div class="reviews">
+        ${reviewsElement}
+      </div>
+`;
+};
 
-// const createLikedButtonTemplate = () => `
-//   <button aria-label="unlike this resto" id="likeButton" class="like">
-//   <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
-//   <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Delete from Favorite
-//   </button>
-//   `;
 
 export {
   createRestoItemTemplate,
-  //   createRestoDetailTemplate,
-  //   createLikeButtonTemplate,
-  //   createLikedButtonTemplate,
+    createRestoDetailTemplate,
+    createLikeButtonTemplate,
+    createLikedButtonTemplate,
 };

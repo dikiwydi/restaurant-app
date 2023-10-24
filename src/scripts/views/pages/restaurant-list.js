@@ -5,7 +5,6 @@ const RestaurantList = {
   async render() {
     return `
     <section class="content">
-    </article>
     <div class="restoran">
       <h1 class="restoran__label">TEMUKAN RESTORAN TERBAIK</h1>
       <div class="posts"></div>

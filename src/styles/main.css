@@ -204,6 +204,174 @@ footer a {
   }
 }
 
+.like {
+  background-color: #3d405b;
+  color: #f4f1de;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like i {
+  font-size: 1.3em;
+  margin-right: 5px;
+}
+
+.like i:nth-child(2) {
+  display: none;
+}
+
+.like:hover i:nth-child(1) {
+  display: none;
+}
+
+.like:hover i:nth-child(2) {
+  display: block;
+}
+
+/* Detail */
+
+.restaurant h2 {
+  font-size: 1.8em;
+}
+
+.resto__title {
+  color: #3d405b;
+}
+
+.restaurant h2:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.restaurant h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.resto__data img {
+  width: 60%;
+  min-width: 500px;
+}
+
+.categories {
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: -33px;
+}
+
+.restaurant .category {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #f2cc8f;
+  margin: 0 5px
+}
+
+.resto__data, .reviewContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 3px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+
+.resto__data {
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-start;
+  column-gap: 20px;
+}
+
+.reviews {
+  margin-top: 1.5rem;
+}
+
+.reviews .customerName {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reviews .reviewDate {
+  margin-top: 10px;
+  color: darkgray;
+}
+
+.reviews .review {
+  font-size: 1.2em;
+}
+
+
+
+.resto__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.resto__image-container figcaption {
+  z-index: -1;
+  margin-top: -14px;
+  padding: 10px;
+  background-color: #3d405b;
+  color: #f4f1de;
+}
+
+.resto__image-container span {
+  font-size: 1.7em;
+}
+
+.resto__info h4{
+  font-size: 1.3em;
+}
+
+.resto__info h4:not(:first-child) {
+  margin-top: 10px;
+}
+
+.resto__menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 640px;
+  margin-top: 10px;
+}
+
+.resto__menu-list li {
+  list-style-type: none;
+  max-height: 20px;
+}
+
+.resto__menu-list h5 {
+  font-size: 1em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.resto__menu-list .menu {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  padding: 8px;
+  width: 50%;
+}
+
+.resto__menu-list .menu ul{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  column-gap: 15px;
+}
+
 @media screen and (min-width: 455px) {
   .headline__content {
     padding: 16px 16px;
